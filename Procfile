@@ -1,1 +1,1 @@
-web: gunicorn psa/psa.wsgi --log-file -
+web: gunicorn psa.wsgi --log-file -
