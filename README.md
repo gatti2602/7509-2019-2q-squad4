@@ -18,14 +18,29 @@
 Django
 ------
 
+### Instalacion
+```sh
+	pip3 install Django
+```
+
 ### Helloworld 
 
 Iniciar server e ir a: http://127.0.0.1:8000/helloworld/
 
 ---
-Cucumber
+Cucumber (Behave en Python)
 --------
+[Tutorial](https://behave.readthedocs.io/en/latest/tutorial.html)
 
+### Instalacion
+```sh
+	pip3 install behave-django
+```
+
+### Ejecutar 
+```sh
+	python3 manage.py behave
+```
 ---
 Heroku
 ------
