@@ -1,11 +1,31 @@
 # Repositorio del Squad 4 - Año 2019 - 2Q
 
-## Links utiles
+ Links utiles
+ ------------
+
 [Google Drive](https://drive.google.com/drive/folders/1_zad5GPKZTT3MjO10yBQzh6H7INMRInk)
 [Slack](https://app.slack.com/client/T2YH923SQ/GN1GHTK8X/details/info)
 
-## Integrantes
+ Integrantes
+ -----------
+
 - Nicolas Gatti
 - Facundo Bravo
 - Julian Quino
 - Nicolas Sallis
+
+---
+Django
+------
+
+### Helloworld 
+
+Iniciar server e ir a: http://127.0.0.1:8000/helloworld/
+
+---
+Cucumber
+--------
+
+---
+Heroku
+------
