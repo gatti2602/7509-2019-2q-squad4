@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="823d4b78-d113-4709-9d8a-c46f64bc75dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/7509-2019-2q-squad4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/7509-2019-2q-squad4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/.idea/psa.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/features/steps/tutorial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/features/tutorial.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/helloworld/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/psa/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/psa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/psa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/psa/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,20 +13,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="285" />
-    <option name="y" value="53" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
   <component name="ProjectId" id="1QZl2N3Rp2iMARe19ys1XZwIKps" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/psa/settings.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -61,13 +39,48 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Behave.tutorial.feature">
+    <configuration name="Test: " type="DjangoTestsConfigurationType" temporary="true">
+      <module name="7509-2019-2q-squad4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tutorial.feature" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
+      <module name="7509-2019-2q-squad4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <WHAT_TO_RUN WHAT_TO_RUN="$PROJECT_DIR$/features/tutorial.feature" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="psa" type="Python.DjangoServer" factoryName="Django server">
       <module name="7509-2019-2q-squad4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="psa.settings" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python3.6" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -85,6 +98,12 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Behave.tutorial.feature" />
+        <item itemvalue="Django tests.Test: " />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -97,6 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567977677937</updated>
       <workItem from="1567985792303" duration="501000" />
+      <workItem from="1567986681503" duration="2122000" />
     </task>
     <servers />
   </component>
@@ -108,10 +128,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/7509_2019_2q_squad4$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1567986744186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/7509_2019_2q_squad4$tutorial_feature.coverage" NAME="tutorial.feature Coverage Results" MODIFIED="1567986776903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -15,14 +15,15 @@
 - Nicolas Sallis
 
 ---
+Instalacion
+-----------
+Correr: 
+```sh
+	pip3 install -r requirements.txt
+```
+---
 Django
 ------
-
-### Instalacion
-```sh
-	pip3 install Django
-```
-
 ### Helloworld 
 
 Iniciar server e ir a: http://127.0.0.1:8000/helloworld/
@@ -32,15 +33,20 @@ Cucumber (Behave en Python)
 --------
 [Tutorial](https://behave.readthedocs.io/en/latest/tutorial.html)
 
-### Instalacion
-```sh
-	pip3 install behave-django
-```
+Comentar la linea siguiente en settings.sh:
 
-### Ejecutar 
+django_heroku.settings(locals())
+
+
 ```sh
 	python3 manage.py behave
 ```
 ---
 Heroku
 ------
+
+Descomentar la linea siguiente en settings.sh:
+
+django_heroku.settings(locals())
+
+[server](https://squad4-psa.herokuapp.com/)
