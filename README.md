@@ -17,7 +17,12 @@
 ---
 Instalacion
 -----------
-Correr: 
+Pre requisitos: Python y libpq. Para instalarlos:
+```sh
+	sudo apt install python3-pip
+	sudo apt-get install libpq-dev python-dev	
+```
+Una vez instalados, correr: 
 ```sh
 	pip3 install -r requirements.txt
 ```
