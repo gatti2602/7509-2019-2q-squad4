@@ -2,6 +2,8 @@
 Feature: Gestion de Features (FE118)
 
   Scenario: Alta de Features
-    Given que soy gerente de Marketing
-    When quiero ver los features que se estan creando en el sistema
-    Then el sistema me muestra una lista de todos los features con su estado
+    Given que hay features en el sistema
+    When indico al sistema que muestre los features
+    Then obtengo una lista de todos los features en desarrollo
+
+

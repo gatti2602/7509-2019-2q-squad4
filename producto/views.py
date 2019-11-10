@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Feature
 
-# Create your views here.
+
+def feature_list(request):
+    feature_list = Feature.objects.all()
+    output = ', '.join([f.description for f in feature_list])
+    return HttpResponse(output)

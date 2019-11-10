@@ -80,7 +80,7 @@ DATABASES = {
     "default": {
         "ENGINE" : "django.db.backends.sqlite3",
         "NAME": os.path.join(BASE_DIR, "db.sqlite3")
-    }
+    },
 }
 
 # Password validation
@@ -122,7 +122,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #django_heroku.settings(locals())
-ON_HEROKU = os.environ.get('ON_HEROKU')
 
-if ON_HEROKU:
-    django_heroku.settings(locals())
