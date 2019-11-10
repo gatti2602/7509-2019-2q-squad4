@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'producto.apps.ProductoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,4 +121,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
+ON_HEROKU = os.environ.get('ON_HEROKU')
+
+if ON_HEROKU:
+    django_heroku.settings(locals())

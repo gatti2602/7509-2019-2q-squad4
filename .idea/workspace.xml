@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="823d4b78-d113-4709-9d8a-c46f64bc75dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/tutorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/tutorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/psa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Gherkin feature file" />
       </list>
     </option>
   </component>
@@ -167,7 +176,7 @@
       <updated>1567977677937</updated>
       <workItem from="1567985792303" duration="501000" />
       <workItem from="1567986681503" duration="2760000" />
-      <workItem from="1573394027353" duration="2906000" />
+      <workItem from="1573394027353" duration="5773000" />
     </task>
     <task id="LOCAL-00001" summary="Todo andando: Django + Cucumber + Heroku.&#10;&#10;Hay un bug que hace que se tenga que cambiar settings.py para testear o deployar en heroku. sera corregido en un futuro cercano">
       <created>1567989036173</created>
