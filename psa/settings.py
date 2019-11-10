@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'behave_django',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'psa.wsgi.application'
 
+# Database
+# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
+DATABASES = {
+    "default": {
+        "ENGINE" : "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3")
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -109,23 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#Behave Django
-#import django_heroku
-
-INSTALLED_APPS += ['behave_django']
-
-#Cambia la BD a una postgres
-#django_heroku.settings(locals())
-
-import dj_database_url
-
-ON_HEROKU = os.environ.get('ON_HEROKU')
-HEROKU_SERVER = os.environ.get('HEROKU_SERVER')
-
-if ON_HEROKU:
-    DATABASE_URL = 'postgresql:///postgresql'
-else:
-    DATABASE_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-
-DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
-
+django_heroku.settings(locals())

@@ -17,7 +17,8 @@
 ---
 Instalacion
 -----------
-Pre requisitos: Python y libpq. Para instalarlos:
+### Pre requisitos 
+- Python y libpq. Para instalarlos:
 ```sh
 	sudo apt install python3-pip
 	sudo apt-get install libpq-dev python-dev	
@@ -26,6 +27,14 @@ Una vez instalados, correr:
 ```sh
 	pip3 install -r requirements.txt
 ```
+
+- Postgres 
+Instalar el cliente de la base de datos y configurar cuenta de usuario local. [Tutorial](https://www.fullstackpython.com/blog/postgresql-python-3-psycopg2-ubuntu-1604.html)
+
+[Comandos de psql](https://www.postgresql.org/docs/9.6/app-psql.html)
+
+Nombre de BDD: **psa-test**
+
 ---
 Django
 ------
