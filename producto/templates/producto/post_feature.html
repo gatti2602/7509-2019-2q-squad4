@@ -1,0 +1,11 @@
+<h1>Add New Feature</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'producto:post_feature'%}" method="post">
+{% csrf_token %}
+    Descripcion: <input type="text" name="description"><br>
+    Estado: <input type="text" name="status"><br>
+    Fecha Deseada: <input type="date" name="expected_date"><br>
+    <input type="submit" value="Crear">
+</form>

@@ -1,0 +1,9 @@
+{% if features_list %}
+    <ul>
+    {% for feature in features_list %}
+        <li>{{ feature.description }} - {{ feature.status }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No features are available.</p>
+{% endif %}
