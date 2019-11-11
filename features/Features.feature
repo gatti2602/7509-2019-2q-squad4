@@ -6,4 +6,8 @@ Feature: Gestion de Features (FE118)
     When indico al sistema que muestre los features
     Then obtengo una lista de todos los features en desarrollo
 
+  Scenario: Alta de Features desde Form Web
+    Given que ingreso a la pagina de carga de features
+    When completo los valores description, expected_date y status
+    Then el feature se crea en el sistema
 
