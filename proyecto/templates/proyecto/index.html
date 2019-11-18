@@ -1,0 +1,20 @@
+{% if lista_proyectos %}
+    <table style="width:100%">
+      <tr>
+        <th>Cod. Proyecto</th>
+        <th>Titulo</th>
+        <th>Fecha Creacion</th>
+        <th>Fecha Fin Requerida</th>
+      </tr>
+    {% for proyecto in lista_proyectos %}
+        <tr>
+            <td><a href="/proyecto/{{ proyecto.cod_proyecto }}">{{ proyecto.cod_proyecto }}</a></td>
+            <td>{{ proyecto.titulo }}</td>
+            <td>{{ proyecto.fecha_creacion }}</td>
+            <td>{{ proyecto.fecha_fin_req }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No hay Proyectos!!</p>
+{% endif %}
