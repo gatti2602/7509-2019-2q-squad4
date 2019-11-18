@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="823d4b78-d113-4709-9d8a-c46f64bc75dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producto/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/features.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +69,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.psa">
+  <component name="RunManager" selected="Behave.behave">
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <module name="7509-2019-2q-squad4" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,7 +129,7 @@
       <workItem from="1573859191370" duration="382000" />
       <workItem from="1574084482816" duration="1416000" />
       <workItem from="1574085943499" duration="1476000" />
-      <workItem from="1574087570478" duration="2323000" />
+      <workItem from="1574087570478" duration="4435000" />
     </task>
     <task id="LOCAL-00001" summary="Todo andando: Django + Cucumber + Heroku.&#10;&#10;Hay un bug que hace que se tenga que cambiar settings.py para testear o deployar en heroku. sera corregido en un futuro cercano">
       <created>1567989036173</created>
@@ -176,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573437530164</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Integracion con postgres par aunificar una sola BD">
+      <created>1574090144648</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574090144648</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +205,8 @@
     <MESSAGE value="Test de US FE118" />
     <MESSAGE value="Create de Features" />
     <MESSAGE value="Integracion con Selenium y test de form de alta de feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integracion con Selenium y test de form de alta de feature" />
+    <MESSAGE value="Integracion con postgres par aunificar una sola BD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integracion con postgres par aunificar una sola BD" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -223,13 +228,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/features/steps/features.py</url>
-          <line>27</line>
+          <line>31</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/psa/settings.py</url>
-          <line>138</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/features/steps/features.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -244,7 +249,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/7509_2019_2q_squad4$Test__psa.coverage" NAME="Test: psa Coverage Results" MODIFIED="1574084993225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/7509_2019_2q_squad4$behave.coverage" NAME="behave Coverage Results" MODIFIED="1574089542205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/7509_2019_2q_squad4$behave.coverage" NAME="behave Coverage Results" MODIFIED="1574094294724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/7509_2019_2q_squad4$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1567986744186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/7509_2019_2q_squad4$tutorial_feature.coverage" NAME="tutorial.feature Coverage Results" MODIFIED="1567986776903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>

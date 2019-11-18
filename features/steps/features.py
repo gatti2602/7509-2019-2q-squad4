@@ -1,4 +1,7 @@
 from behave import *
+from django.http import request
+from django.urls import reverse
+
 from producto.models import Feature
 from datetime import datetime as dt
 
@@ -21,7 +24,8 @@ def step_impl(context):
 
 @given("que ingreso a la pagina de carga de features")
 def step_impl(context):
-    context.driver.get('http://127.0.0.1:8000/producto/feature/new')
+    url = context.get_url('producto:post_feature')
+    context.driver.get(url)
 
 @when("completo los valores description, expected_date y status")
 def step_impl(context):
