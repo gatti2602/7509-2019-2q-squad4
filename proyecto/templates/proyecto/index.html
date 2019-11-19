@@ -1,20 +1,32 @@
-{% if lista_proyectos %}
-    <table style="width:100%">
-      <tr>
-        <th>Cod. Proyecto</th>
-        <th>Titulo</th>
-        <th>Fecha Creacion</th>
-        <th>Fecha Fin Requerida</th>
-      </tr>
-    {% for proyecto in lista_proyectos %}
-        <tr>
-            <td><a href="/proyecto/{{ proyecto.cod_proyecto }}">{{ proyecto.cod_proyecto }}</a></td>
-            <td>{{ proyecto.titulo }}</td>
-            <td>{{ proyecto.fecha_creacion }}</td>
-            <td>{{ proyecto.fecha_fin_req }}</td>
-        </tr>
-    {% endfor %}
-    </table>
-{% else %}
-    <p>No hay Proyectos!!</p>
-{% endif %}
+{% extends 'base.html' %}
+{% block header %}
+    <title>Proyectos</title>
+{% endblock %}
+
+{% block content %}
+    {% if lista_proyectos %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Cod. Proyecto</th>
+                <th>Titulo</th>
+                <th>Fecha Creacion</th>
+                <th>Fecha Fin Requerida</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for proyecto in lista_proyectos %}
+                <tr>
+                    <td><a href="{% url 'proyecto:detail' proyecto.cod_proyecto %}">{{ proyecto.cod_proyecto }}</a></td>
+                    <td>{{ proyecto.titulo }}</td>
+                    <td>{{ proyecto.fecha_creacion }}</td>
+                    <td>{{ proyecto.fecha_fin_req }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    {% else %}
+        <p>No hay Proyectos!!</p>
+    {% endif %}
+{% endblock %}
