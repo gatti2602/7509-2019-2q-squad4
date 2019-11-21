@@ -17,7 +17,6 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ SECRET_KEY = '1a2p(e$8_%oio(1ppbu7%kcvgk0_f=p5s5r2y8wv(-&7-!g7iz'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -59,8 +57,7 @@ ROOT_URLCONF = 'psa.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -87,17 +84,17 @@ WSGI_APPLICATION = 'psa.wsgi.application'
 #         },
 #     },
 # }
-
-DATABASES = {
-    "default": {
-        "ENGINE" : "django.db.backends.postgresql",
-        "NAME": 'psa',
-        "USER": 'gatti2602',
-        'PASSWORD': 'paralelepipedo',
-        'HOST': 'localhost',
-        'PORT': '',
-    },
-}
+#
+# DATABASES = {
+#     "default": {
+#         "ENGINE" : "django.db.backends.postgresql",
+#         "NAME": 'psa',
+#         "USER": 'gatti2602',
+#         'PASSWORD': 'paralelepipedo',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     },
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -117,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -131,11 +127,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
-django_heroku.settings(locals())
-
+if os.environ['OS'] == 'Windows_NT':
+    DATABASES = {'default': django_heroku.dj_database_url.config(conn_max_age=600, ssl_require=False)}
+else:
+    django_heroku.settings(locals())

@@ -33,7 +33,11 @@ Instalar el cliente de la base de datos y configurar cuenta de usuario local. [T
 
 [Comandos de psql](https://www.postgresql.org/docs/9.6/app-psql.html)
 
-Nombre de BDD: **psa-test**
+Nombre de BDD: **psa**
+User: gatti2602
+Pass: paralelepipedo
+
+Configurar variable de entorno DATABASE_URL con el connection string de postgres
 
 ---
 Django

@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-TBD
-</body>
-</html>
+{% extends 'base.html' %}
+{% load myfilters %}
+{% block header %}
+    <title>Proyectos</title>
+{% endblock %}
+
+{% block content %}
+<form >
+    {{ form.non_field_errors }}
+    {% for field in form %}
+      <div class="form-group">
+        {{ field.errors }}
+        {{ field.label_tag }}
+        {{ field |addclass:"form-control" }}
+      </div>
+    {% endfor %}
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Tareas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Riesgos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Iteraciones</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Requisitos</a>
+      </li>
+    </ul>
+</form>
+{% endblock %}

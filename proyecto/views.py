@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from proyecto.forms import ProyectoForm
 from proyecto.models import Proyecto
 
 
@@ -11,5 +13,7 @@ def index(request):
 
 
 def detail(request, cod_proyecto):
-    return render(request, 'proyecto/detail.html')
+    proyecto = get_object_or_404(Proyecto, pk=cod_proyecto)
+    form = ProyectoForm(instance=proyecto)
+    return render(request, 'proyecto/detail.html', {'form': form})
 

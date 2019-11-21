@@ -2,3 +2,4 @@ django
 django-heroku
 behave-django
 gunicorn
+selenium
