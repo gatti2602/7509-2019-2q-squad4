@@ -132,7 +132,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-if os.environ['OS'] == 'Windows_NT':
-    DATABASES = {'default': django_heroku.dj_database_url.config(conn_max_age=600, ssl_require=False)}
-else:
+try:
+    if os.environ['OS'] == 'Windows_NT':
+        DATABASES = {'default': django_heroku.dj_database_url.config(conn_max_age=600, ssl_require=False)}
+    else:
+        django_heroku.settings(locals())
+except:
     django_heroku.settings(locals())
