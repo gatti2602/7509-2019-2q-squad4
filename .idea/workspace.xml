@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="823d4b78-d113-4709-9d8a-c46f64bc75dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/templates/proyecto/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/templates/proyecto/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/templates/proyecto/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/templates/proyecto/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +146,7 @@
       <workItem from="1574085943499" duration="1476000" />
       <workItem from="1574087570478" duration="17803000" />
       <workItem from="1574529814821" duration="239000" />
-      <workItem from="1574530066622" duration="16041000" />
+      <workItem from="1574530066622" duration="16714000" />
     </task>
     <task id="LOCAL-00001" summary="Todo andando: Django + Cucumber + Heroku.&#10;&#10;Hay un bug que hace que se tenga que cambiar settings.py para testear o deployar en heroku. sera corregido en un futuro cercano">
       <created>1567989036173</created>
@@ -224,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574126447127</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ABM de Riesgos para demo">
+      <created>1574643510410</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1574643510410</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +253,8 @@
     <MESSAGE value="Integracion con postgres par aunificar una sola BD" />
     <MESSAGE value="Entidad Proyecto y Estado asociado&#10;&#10;Se agrega funcionalidad para listar proyecto y visualizarlo. La creacion debe hacerse utilizando el admin." />
     <MESSAGE value="Soporte responsive con bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Soporte responsive con bootstrap" />
+    <MESSAGE value="ABM de Riesgos para demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="ABM de Riesgos para demo" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
