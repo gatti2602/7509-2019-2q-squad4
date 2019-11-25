@@ -14,20 +14,54 @@
         {{ field |addclass:"form-control" }}
       </div>
     {% endfor %}
+    <div class="form-group">
+        <label>Exposición</label>
+        {{ proyecto.ObtenerExposicion }}
+    </div>
 
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Tareas</a>
+          <a class="nav-link disabled" href="#">Tareas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Riesgos</a>
+          <a class="nav-link active selected" href="#">Riesgos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Iteraciones</a>
+          <a class="nav-link disabled" href="#">Iteraciones</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Requisitos</a>
       </li>
     </ul>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Descripción</th>
+            <th>Fecha Alta</th>
+            <th>Fecha Cierre</th>
+            <th>Probabilidad</th>
+            <th>Impacto</th>
+            <th>Presentado</th>
+        </tr>
+        </thead>
+        {% for riesgo in risks %}
+            <tr>
+                <td>
+                    <a href="{% url "proyecto:riesgo_detail" proyecto.cod_proyecto riesgo.id %}">{{ riesgo.descripcion }}</a>
+                </td>
+                <td>{{ riesgo.fecha_alta }}</td>
+                <td>{{ riesgo.fecha_cierre }}</td>
+                <td>{{ riesgo.probabilidad }}</td>
+                <td>{{ riesgo.impacto }}</td>
+                <td>{% if riesgo.presentado %}
+                    <input checked disabled="true" type="checkbox">
+                {% else %}
+                    <input type="checkbox" disabled="true">
+                {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a class="btn btn-primary " href="#">Nuevo Riesgo</a>
 </form>
 {% endblock %}
