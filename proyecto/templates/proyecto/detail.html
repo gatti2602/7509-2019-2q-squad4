@@ -62,6 +62,6 @@
             </tr>
         {% endfor %}
     </table>
-    <a class="btn btn-primary " href="#">Nuevo Riesgo</a>
+    <a class="btn btn-primary " href="{% url "proyecto:riesgo_create" proyecto.cod_proyecto %}">Nuevo Riesgo</a>
 </form>
 {% endblock %}

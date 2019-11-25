@@ -25,3 +25,9 @@ class RiesgoForm(forms.ModelForm):
     class Meta:
         model = Riesgo
         fields = ['descripcion', 'fecha_cierre', 'probabilidad', 'presentado', 'impacto']
+
+
+class RiesgoCreateForm(forms.ModelForm):
+    class Meta:
+        model = Riesgo
+        fields = ['descripcion', 'probabilidad', 'impacto']

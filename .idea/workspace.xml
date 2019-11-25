@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="823d4b78-d113-4709-9d8a-c46f64bc75dd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/proyecto/migrations/0007_auto_20191125_0213.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/templates/proyecto/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/templates/proyecto/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +151,7 @@
       <workItem from="1574085943499" duration="1476000" />
       <workItem from="1574087570478" duration="17803000" />
       <workItem from="1574529814821" duration="239000" />
-      <workItem from="1574530066622" duration="17241000" />
+      <workItem from="1574530066622" duration="19556000" />
     </task>
     <task id="LOCAL-00001" summary="Todo andando: Django + Cucumber + Heroku.&#10;&#10;Hay un bug que hace que se tenga que cambiar settings.py para testear o deployar en heroku. sera corregido en un futuro cercano">
       <created>1567989036173</created>
@@ -232,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574643992044</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="url base apunta a proyectos">
+      <created>1574644524711</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1574644524711</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +273,8 @@
     <MESSAGE value="Entidad Proyecto y Estado asociado&#10;&#10;Se agrega funcionalidad para listar proyecto y visualizarlo. La creacion debe hacerse utilizando el admin." />
     <MESSAGE value="Soporte responsive con bootstrap" />
     <MESSAGE value="ABM de Riesgos para demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="ABM de Riesgos para demo" />
+    <MESSAGE value="url base apunta a proyectos" />
+    <option name="LAST_COMMIT_MESSAGE" value="url base apunta a proyectos" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -293,6 +306,11 @@
           <url>file://$PROJECT_DIR$/features/steps/features.py</url>
           <line>27</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/proyecto/views.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

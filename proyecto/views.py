@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 
-from proyecto.forms import ProyectoForm, RiesgoForm
+from proyecto.forms import ProyectoForm, RiesgoForm, RiesgoCreateForm
 from proyecto.models import Proyecto
 
 
@@ -32,4 +32,18 @@ def riesgo_detail(request, cod_proyecto, cod_riesgo):
             return HttpResponseRedirect(reverse('proyecto:project_detail', args=(proyecto.cod_proyecto,)))
     else:
         riesgoForm = RiesgoForm(instance=riesgo)
+    return render(request, 'riesgo/detail.html', {'form': riesgoForm})
+
+
+def riesgo_create(request, cod_proyecto):
+    proyecto = get_object_or_404(Proyecto, pk=cod_proyecto)
+    if request.method == 'POST':
+        riesgoForm = RiesgoCreateForm(request.POST)
+        if riesgoForm.is_valid():
+            proyecto.CrearRiesgo(riesgoForm.cleaned_data.get('descripcion'),
+                                 riesgoForm.cleaned_data.get('probabilidad'),
+                                 riesgoForm.cleaned_data.get('impacto'))
+            return HttpResponseRedirect(reverse('proyecto:project_detail', args=(proyecto.cod_proyecto,)))
+    else:
+        riesgoForm = RiesgoCreateForm()
     return render(request, 'riesgo/detail.html', {'form': riesgoForm})

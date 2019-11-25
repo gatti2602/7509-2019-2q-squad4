@@ -31,7 +31,7 @@ class Proyecto(models.Model):
             exposicion = riesgo.probabilidad * riesgo.impacto.impacto
         if riesgos.count() > 0:
             exposicion = exposicion / riesgos.count()
-        return exposicion
+        return round(exposicion, 2)
 
 
 class RiesgoImpacto(models.Model):
@@ -56,7 +56,7 @@ class Riesgo(models.Model):
     descripcion = models.CharField(max_length=50)
     fecha_cierre = models.DateField(null=True)
     probabilidad = models.FloatField()
-    presentado = models.BooleanField()
+    presentado = models.BooleanField(default=False)
 
     # Audit
     fecha_alta = models.DateField(auto_now_add=True)
