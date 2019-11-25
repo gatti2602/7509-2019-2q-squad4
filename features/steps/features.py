@@ -1,9 +1,8 @@
+from datetime import datetime as dt
+
 from behave import *
-from django.http import request
-from django.urls import reverse
 
 from producto.models import Feature
-from datetime import datetime as dt
 
 
 @given("que hay features en el sistema")
@@ -37,11 +36,12 @@ def step_impl(context):
     assert context.expected_Date is not None
     context.description.send_keys('New Feature')
     context.status.send_keys('APROBADA')
-    context.expected_Date.send_keys('2019-01-01')
+    context.expected_Date.send_keys('01-01-2019')
     context.expected_Date.submit()
+    pass
 
 
 @then("el feature se crea en el sistema")
 def step_impl(context):
-    assert Feature.objects.filter(description='New Feature').count() == 1
-
+    count = Feature.objects.filter(description='New Feature').count()
+    assert count == 1
