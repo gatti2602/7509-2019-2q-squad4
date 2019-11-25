@@ -16,6 +16,11 @@ class RiesgoForm(forms.ModelForm):
         cleaned_data = super().clean()
         fecha_alta = self.instance.fecha_alta
         fecha_cierre = cleaned_data.get('fecha_cierre')
+        probabilidad = cleaned_data.get('probabilidad')
+
+        if probabilidad > 1.0 or probabilidad < 0.0:
+            raise forms.ValidationError("Probabilidad debe estar entre 0.0 y 1.0")
+
         if fecha_cierre is None:
             return
 
@@ -28,6 +33,13 @@ class RiesgoForm(forms.ModelForm):
 
 
 class RiesgoCreateForm(forms.ModelForm):
+    def clean(self):
+        cleaned_data = super().clean()
+        probabilidad = cleaned_data.get('probabilidad')
+
+        if probabilidad > 1.0 or probabilidad < 0.0:
+            raise forms.ValidationError("Probabilidad debe estar entre 0.0 y 1.0")
+
     class Meta:
         model = Riesgo
         fields = ['descripcion', 'probabilidad', 'impacto']
