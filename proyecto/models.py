@@ -28,7 +28,7 @@ class Proyecto(models.Model):
         exposicion = 0
         riesgos = self.riesgo_set.exclude(fecha_cierre__lte=datetime.now())
         for riesgo in riesgos:
-            exposicion = riesgo.probabilidad * riesgo.impacto.impacto
+            exposicion = exposicion + riesgo.probabilidad * riesgo.impacto.impacto
         if riesgos.count() > 0:
             exposicion = exposicion / riesgos.count()
         return round(exposicion, 2)
