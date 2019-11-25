@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="823d4b78-d113-4709-9d8a-c46f64bc75dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psa/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/psa/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +146,7 @@
       <workItem from="1574085943499" duration="1476000" />
       <workItem from="1574087570478" duration="17803000" />
       <workItem from="1574529814821" duration="239000" />
-      <workItem from="1574530066622" duration="16714000" />
+      <workItem from="1574530066622" duration="17241000" />
     </task>
     <task id="LOCAL-00001" summary="Todo andando: Django + Cucumber + Heroku.&#10;&#10;Hay un bug que hace que se tenga que cambiar settings.py para testear o deployar en heroku. sera corregido en un futuro cercano">
       <created>1567989036173</created>
@@ -225,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574643510410</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ABM de Riesgos para demo">
+      <created>1574643992044</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1574643992044</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
