@@ -24,6 +24,11 @@ class Proyecto(models.Model):
         riesgo.proyecto = self
         riesgo.save()
 
+    def CrearIteracion(self, fecha_desde, fecha_hasta):
+        iteracion = Iteracion(fecha_desde=fecha_desde, fecha_hasta=fecha_hasta)
+        iteracion.proyecto = self
+        iteracion.save()
+
     def ObtenerExposicion(self):
         exposicion = 0
         riesgos = self.riesgo_set.exclude(fecha_cierre__lte=datetime.now())

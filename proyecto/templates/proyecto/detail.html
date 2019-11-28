@@ -60,8 +60,7 @@
                         </tr>
                     {% endfor %}
                 </table>
-                <a class="btn btn-primary " href="{% url "proyecto:riesgo_create" proyecto.cod_proyecto %}">Nuevo
-                    Riesgo</a>
+                <a class="btn btn-primary " href="{% url "proyecto:riesgo_create" proyecto.cod_proyecto %}">Crear</a>
             </div>
             <div class="tab-pane fade" id="iteraciones" role="tabpanel" aria-labelledby="iteraciones-tab">
                 <table class="table">
@@ -80,6 +79,7 @@
                         </tr>
                     {% endfor %}
                 </table>
+                <a class="btn btn-primary " href="{% url "proyecto:iteracion_create" proyecto.cod_proyecto %}">Crear</a>
             </div>
         </div>
 

@@ -46,6 +46,10 @@ class RiesgoCreateForm(forms.ModelForm):
 
 
 class IteracionForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        self.cod_proyecto = kwargs.pop('cod_proyecto')
+        super(IteracionForm, self).__init__(*args, **kwargs)
+
     def clean(self):
         cleaned_data = super().clean()
         fecha_desde = cleaned_data.get('fecha_desde')
@@ -55,8 +59,7 @@ class IteracionForm(forms.ModelForm):
             raise forms.ValidationError('Fecha Desde debe ser anterior a Fecha Hasta')
 
         # TODO: Agregar validaciones de solapamiento
-        cod = self.instance.proyecto.cod_proyecto
-        it = Iteracion.objects.filter(proyecto__cod_proyecto=cod,
+        it = Iteracion.objects.filter(proyecto__cod_proyecto=self.cod_proyecto,
                                       fecha_desde__lte=fecha_hasta,
                                       fecha_hasta__gte=fecha_desde)
 
