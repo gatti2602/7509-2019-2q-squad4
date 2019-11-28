@@ -65,3 +65,19 @@ class Riesgo(models.Model):
     # Foreigns
     proyecto = models.ForeignKey(Proyecto, on_delete=models.PROTECT)
     impacto = models.ForeignKey(RiesgoImpacto, on_delete=models.PROTECT)
+
+
+class Iteracion(models.model):
+    """
+    Iteraciones para implementar los proyectos
+    """
+    # fields
+    fecha_desde = models.DateField()
+    fecha_hasta = models.DateField()
+
+    # Audit
+    fecha_alta = models.DateField(auto_now_add=True)
+    fecha_modif = models.DateField(auto_now=True)
+
+    # Foreigns
+    proyecto = models.ForeignKey(Proyecto, on_delete=models.PROTECT)

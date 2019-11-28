@@ -1,6 +1,6 @@
 from django import forms
 
-from proyecto.models import Proyecto, Riesgo
+from proyecto.models import Proyecto, Riesgo, Iteracion
 
 
 class ProyectoForm(forms.ModelForm):
@@ -43,3 +43,13 @@ class RiesgoCreateForm(forms.ModelForm):
     class Meta:
         model = Riesgo
         fields = ['descripcion', 'probabilidad', 'impacto']
+
+
+class IteracionForm(forms.ModelForm):
+    def clean(self):
+        cleaned_data = super().clean()
+        # TODO: Agregar validaciones de cierre
+
+    class Meta:
+        model = Iteracion
+        fields = ['fecha_desde, fecha_hasta']
