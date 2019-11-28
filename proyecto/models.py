@@ -33,6 +33,8 @@ class Proyecto(models.Model):
             exposicion = exposicion / riesgos.count()
         return round(exposicion, 2)
 
+    def __str__(self):
+        return self.descripcion
 
 class RiesgoImpacto(models.Model):
     """
@@ -66,8 +68,11 @@ class Riesgo(models.Model):
     proyecto = models.ForeignKey(Proyecto, on_delete=models.PROTECT)
     impacto = models.ForeignKey(RiesgoImpacto, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return self.descripcion
 
-class Iteracion(models.model):
+
+class Iteracion(models.Model):
     """
     Iteraciones para implementar los proyectos
     """
@@ -81,3 +86,6 @@ class Iteracion(models.model):
 
     # Foreigns
     proyecto = models.ForeignKey(Proyecto, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return str(self.fecha_desde) + ' - ' + str(self.fecha_hasta)

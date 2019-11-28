@@ -19,7 +19,8 @@ def project_detail(request, cod_proyecto):
     form = ProyectoForm(instance=proyecto)
     return render(request, 'proyecto/detail.html', {'form': form,
                                                     'proyecto': proyecto,
-                                                    'risks': proyecto.riesgo_set.all()})
+                                                    'risks': proyecto.riesgo_set.all(),
+                                                    'iters': proyecto.iteracion_set.all()})
 
 
 def riesgo_detail(request, cod_proyecto, cod_riesgo):

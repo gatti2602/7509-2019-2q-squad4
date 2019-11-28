@@ -5,63 +5,83 @@
 {% endblock %}
 
 {% block content %}
-<form >
-    {{ form.non_field_errors }}
-    {% for field in form %}
-      <div class="form-group">
-        {{ field.errors }}
-        {{ field.label_tag }}
-        {{ field |addclass:"form-control" }}
-      </div>
-    {% endfor %}
-    <div class="form-group">
-        <label>Exposición</label>
-        {{ proyecto.ObtenerExposicion }}
-    </div>
-
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-          <a class="nav-link disabled" href="#">Tareas</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link active selected" href="#">Riesgos</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link disabled" href="#">Iteraciones</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Requisitos</a>
-      </li>
-    </ul>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Descripción</th>
-            <th>Fecha Alta</th>
-            <th>Fecha Cierre</th>
-            <th>Probabilidad</th>
-            <th>Impacto</th>
-            <th>Presentado</th>
-        </tr>
-        </thead>
-        {% for riesgo in risks %}
-            <tr>
-                <td>
-                    <a href="{% url "proyecto:riesgo_detail" proyecto.cod_proyecto riesgo.id %}">{{ riesgo.descripcion }}</a>
-                </td>
-                <td>{{ riesgo.fecha_alta }}</td>
-                <td>{{ riesgo.fecha_cierre }}</td>
-                <td>{{ riesgo.probabilidad }}</td>
-                <td>{{ riesgo.impacto }}</td>
-                <td>{% if riesgo.presentado %}
-                    <input checked disabled="true" type="checkbox">
-                {% else %}
-                    <input type="checkbox" disabled="true">
-                {% endif %}
-                </td>
-            </tr>
+    <form>
+        {{ form.non_field_errors }}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.errors }}
+                {{ field.label_tag }}
+                {{ field |addclass:"form-control" }}
+            </div>
         {% endfor %}
-    </table>
-    <a class="btn btn-primary " href="{% url "proyecto:riesgo_create" proyecto.cod_proyecto %}">Nuevo Riesgo</a>
-</form>
+        <div class="form-group">
+            <label>Exposición</label>
+            {{ proyecto.ObtenerExposicion }}
+        </div>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active selected" id="riesgo-tab" data-toggle="tab" href="#riesgo" role="tab"
+                   aria-controls="riesgo" aria-selected="true">Riesgos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="iteraciones-tab" data-toggle="tab" href="#iteraciones" role="tab"
+                   aria-controls="iteraciones" aria-selected="true">Iteraciones</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="riesgo" role="tabpanel" aria-labelledby="riesgo-tab">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Fecha Alta</th>
+                        <th>Fecha Cierre</th>
+                        <th>Probabilidad</th>
+                        <th>Impacto</th>
+                        <th>Presentado</th>
+                    </tr>
+                    </thead>
+                    {% for riesgo in risks %}
+                        <tr>
+                            <td>
+                                <a href="{% url "proyecto:riesgo_detail" proyecto.cod_proyecto riesgo.id %}">{{ riesgo.descripcion }}</a>
+                            </td>
+                            <td>{{ riesgo.fecha_alta }}</td>
+                            <td>{{ riesgo.fecha_cierre }}</td>
+                            <td>{{ riesgo.probabilidad }}</td>
+                            <td>{{ riesgo.impacto }}</td>
+                            <td>{% if riesgo.presentado %}
+                                <input checked disabled="true" type="checkbox">
+                            {% else %}
+                                <input type="checkbox" disabled="true">
+                            {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <a class="btn btn-primary " href="{% url "proyecto:riesgo_create" proyecto.cod_proyecto %}">Nuevo
+                    Riesgo</a>
+            </div>
+            <div class="tab-pane fade" id="iteraciones" role="tabpanel" aria-labelledby="iteraciones-tab">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Fecha Desde</th>
+                        <th>Fecha Hasta</th>
+                    </tr>
+                    </thead>
+                    {% for iteracion in iters %}
+                        <tr>
+                            <td>
+                                <a href="#">{{ iteracion.fecha_desde }}</a>
+                            </td>
+                            <td>{{ iteracion.fecha_hasta }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+    </form>
 {% endblock %}

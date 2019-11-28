@@ -48,8 +48,21 @@ class RiesgoCreateForm(forms.ModelForm):
 class IteracionForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super().clean()
-        # TODO: Agregar validaciones de cierre
+        fecha_desde = cleaned_data.get('fecha_desde')
+        fecha_hasta = cleaned_data.get('fecha_hasta')
+
+        if fecha_desde >= fecha_hasta:
+            raise forms.ValidationError('Fecha Desde debe ser anterior a Fecha Hasta')
+
+        # TODO: Agregar validaciones de solapamiento
+        cod = self.instance.proyecto.cod_proyecto
+        it = Iteracion.objects.filter(proyecto__cod_proyecto=cod,
+                                      fecha_desde__lte=fecha_hasta,
+                                      fecha_hasta__gte=fecha_desde)
+
+        if it.count() > 0:
+            raise forms.ValidationError('Iteraciones se solapan')
 
     class Meta:
         model = Iteracion
-        fields = ['fecha_desde, fecha_hasta']
+        fields = ['fecha_desde', 'fecha_hasta']
